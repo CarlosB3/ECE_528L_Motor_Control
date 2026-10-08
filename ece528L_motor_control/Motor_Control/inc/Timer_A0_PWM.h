@@ -24,16 +24,21 @@
 #define TIMER_A0_PERIOD_CONSTANT 15000
 
 /**
- * @brief
+ * @brief Initialize Timer_A0 to generate PWM signals for the DC motors.
  *
- * @param period_constant
+ * This function configures Timer_A0 to generate two PWM signals on pins P2.6 and P2.7. 
+ * It uses SMCLK as the clock source and divides the timer clock by 8,
+ * Operates in Up/Down mode.
  *
- * @param duty_cycle_1
+ * @param period_constant The value used to set the PWM period in CCR[0].
  *
- * @param duty_cycle_2
+ * @param duty_cycle_1 The PWM duty cycle value for P2.6 (CCR[3]).
+ *
+ * @param duty_cycle_2 The PWM duty cycle value for P2.7 (CCR[4]).
  *
  * @return None
  */
+void Timer_A0_PWM_Init(uint16_t period_constant, uint16_t duty_cycle_1, uint16_t duty_cycle_2);
 void Timer_A0_PWM_Init(uint16_t period_constant, uint16_t duty_cycle_1, uint16_t duty_cycle_2);
 
 /**

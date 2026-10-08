@@ -57,9 +57,12 @@
 void (*Bumper_Task)(uint8_t bumper_switch_state);
 
 /**
- * @brief
+ * @brief Initializes the Bumper Switches as GPIO inputs with falling-edge interrupts.
  *
- * @param task A pointer to the user-defined function that will be called on a falling edge event.
+ * This function configures the bumper switches as GPIO inputs,
+ * enables the internal pull-up resistors, and configures falling-edge interrupts to detect when a bumper switch is pressed.
+ *
+ * @param task A pointer to the  function that will be called on a falling edge event.
  *
  * @return None
  */

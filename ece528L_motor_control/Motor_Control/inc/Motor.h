@@ -19,12 +19,17 @@
 #include "../inc/Timer_A0_PWM.h"
 
 /**
- * @brief
+ * @brief Initialize the GPIO pins and Timer_A0 PWM for the DC motors.
+ *
+ * This function configures the motor direction 
+ * Enable pins as GPIO outputs. It initializes the output values to zero.
+ * Configures Timer_A0 with a PWM period of 20 ms.
  *
  * @param None
  *
  * @return None
  */
+
 void Motor_Init();
 
 /**
@@ -56,22 +61,28 @@ void Motor_Forward(uint16_t left_duty_cycle, uint16_t right_duty_cycle);
 void Motor_Backward(uint16_t left_duty_cycle, uint16_t right_duty_cycle);
 
 /**
- * @brief
+ * @brief Turn the robot left using the DC motors.
  *
- * @param left_duty_cycle
+ * This function configures the left motor to move backward and the right motor to move forward. 
+ * It updates the PWM duty cycles to control the speed of both motors.
  *
- * @param right_duty_cycle
+ * @param left_duty_cycle The PWM duty cycle value for the left motor.
+ *
+ * @param right_duty_cycle The PWM duty cycle value for the right motor.
  *
  * @return None
  */
 void Motor_Left(uint16_t left_duty_cycle, uint16_t right_duty_cycle);
 
 /**
- * @brief
+ * @brief Turn the robot right using the DC motors.
  *
- * @param left_duty_cycle
+ * This function configures the left motor to move forward and the right motor to move backward. 
+ * It updates the PWM duty cycles to control the speed of both motors.
  *
- * @param right_duty_cycle
+ * @param left_duty_cycle The PWM duty cycle value for the left motor.
+ *
+ * @param right_duty_cycle The PWM duty cycle value for the right motor.
  *
  * @return None
  */
